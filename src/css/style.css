@@ -1,0 +1,29 @@
+/* Styles go here */
+.dashboard-title-month ul{
+  padding:0;
+  height:3em;
+}
+
+.dashboard-title-month li{
+  display:inline-block;
+  width:7%;
+  text-align:center;
+  line-height:3em;
+}
+
+.white-box-container{
+  background-color: #fff;
+}
+
+.dashboard-chart-summary-container .white-box-container{
+  height: 200px;
+}
+
+.dashboard-chart-detail-container .white-box-container{
+  height: 300px;
+}
+
+.dashboard-chart-detail-container .chart{
+  width: 100%;
+  height: 100%;
+}

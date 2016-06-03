@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" href="build/css/style.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.1.10/echarts.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid dashboard-container">
+      <section class="dashboard-title-month">
+        <ul>
+         <li>FY16:</li>
+         <li>Jan</li>
+         <li>Feb</li>
+         <li>Mar</li>
+         <li>Apr</li>
+         <li>May</li>
+         <li>Jun</li>
+         <li>Jul</li>
+         <li>Aug</li>
+         <li>Sep</li>
+         <li>Oct</li>
+         <li>Nov</li>
+         <li>Dec</li>
+        </ul>
+      </section>
+      <section class="dashboard-chart-summary-container row">
+        <div class="col-md-3 col-sm-6 white-box-container">
+          <div class="total-budegt-chart"></div>
+        </div>
+        <div class="col-md-3 col-sm-6 white-box-container">
+          <div class="buspecific-chart"></div>
+        </div>
+        <div class="col-md-3 col-sm-6 white-box-container">
+          <div class="enterprise-chart"></div>
+        </div>
+        <div class="col-md-3 col-sm-6 white-box-container">
+          <div class="coreit-chart"></div>
+        </div>
+      </section>
+      <section class="dashboard-chart-detail-container row">
+        <div class="col-md-4 white-box-container">
+          <div class="chart by-service-chart"></div>
+        </div>
+        <div class="col-md-4 white-box-container">
+          <div class="chart by-bu-chart"></div>
+        </div>
+        <div class="col-md-4 white-box-container">
+          <div class="chart history-trend-chart"></div>
+        </div>
+      </section>
+    </div>
+    <!-- 为 ECharts 准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width:80%;height:500px;"></div>
+    <div id="containerByBu" style="width:80%;height:500px;"></div>
+    <div id="containerByService" style="width:80%;height:500px;"></div>
+    <div id="containerHistory" style="width:80%;height:500px;"></div>
+    <div id="temp" style="width:80%;height:500px;"></div>
+    <script src="build/js/require.js" defer async="true"></script>
+    <script src="build/js/require.js" data-main="build/js/lib/script.min"></script>
+  </body>
+
+</html>
