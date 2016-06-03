@@ -1,6 +1,5 @@
-//test
 import { BDDataConfigOption } from  './data-service.min'
-//*-------------------format: to be replaced by restful api-----------------
+//*---------------------format: to be replaced by restful api----------------------
 var rawDataByService = {
     "Investment Projects": 6.663392234,
     "BU Discrete Software": 1.96692949,

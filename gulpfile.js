@@ -50,12 +50,14 @@ gulp.task('copyThirdLib', ['clean'], function() {
 });
 
 gulp.task('watch', function() {
+  // Watch thirdlib .js files
+  gulp.watch('src/js/*.js', ['copyThirdLib']);
   // Watch .scss files
   gulp.watch('src/css/*.css', ['styles']);
   // Watch .js files
   gulp.watch('src/js/lib/*.js', ['scripts']);
   // Create LiveReload server
-  livereload.listen();
+  // livereload.listen();
   // Watch any files in dist/, reload on change
-  gulp.watch(['build/**']).on('change', livereload.changed);
+  //gulp.watch(['build/**']).on('change', livereload.changed);
 });
