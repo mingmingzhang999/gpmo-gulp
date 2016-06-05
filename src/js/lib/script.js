@@ -1,4 +1,5 @@
 import { BDDataConfigOption } from  './data-service.min'
+import { WaterfullChart } from './waterfull-chart.min'
 //*---------------------format: to be replaced by restful api----------------------
 var rawDataByService = {
     "Investment Projects": 6.663392234,
@@ -147,3 +148,8 @@ var resizeChart = function() {
     myChartByService.resize();
 };
 window.onresize = resizeChart;
+
+
+var waterfullChart = new WaterfullChart();
+var ad = waterfullChart.convertToAssistDatas([300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]);
+console.log(">>>", ad);

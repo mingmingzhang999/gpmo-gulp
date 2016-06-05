@@ -1,3 +1,30 @@
+//-----waterfull chart data example----------
+// {
+//     "total": 103.56,
+//     "BU Specific":{
+//         "Software Assigned to Apps":20.01,
+//         "Hosting Services":31.02,
+//         "HPE IT RtB": 3.01,
+//         "Others": 7.02,
+//         "total": 61.06,
+//     },
+//     "Core IT Services":{
+//         "Mobile Subscription":3.1,
+//         "Client Compting":6.2,
+//         "Office Phone":11.1,
+//         "Others":16.1,
+//         "total": 36.5,
+//     },
+//     "Enterprise IT Services":{
+//         "It Management":1,
+//         "Investment Projects":1,
+//         "WAN":2,
+//         "Others":3,
+//         "total": 7,
+//     }
+// }
+
+
 var rawDataByBu =[
 /* 1 */
 {
@@ -135,5 +162,5 @@ var rawDataByBu =[
     "OTHER: Monthly Cost" : 0.64056924,
     "Total" : 17.49759573,
     "Month" : "Nov FY2016"
-}  
+}
 ]
