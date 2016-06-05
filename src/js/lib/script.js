@@ -46,6 +46,7 @@ console.log(optionByService);
 console.log(optionByBu);
 
 // 基于准备好的dom，初始化echarts实例
+var myWaterfulChart = echarts.init(document.getElementById('temp'));
 var myChart = echarts.init(document.getElementById('main'));
 var myChartByBu = echarts.init(document.getElementsByClassName('by-bu-chart')[0]);
 var myChartByService = echarts.init(document.getElementsByClassName("by-service-chart")[0]);
@@ -138,6 +139,7 @@ var guageOption = {
 };
 
 // 使用刚指定的配置项和数据显示图表。
+
 myChart.setOption(option);
 myChartByBu.setOption(optionByBu);
 myChartByService.setOption(optionByService);
@@ -148,8 +150,37 @@ var resizeChart = function() {
     myChartByService.resize();
 };
 window.onresize = resizeChart;
-
+var rdd = {
+    "Total": 800,
+    "BU Specific":{
+        "Software Assigned to Apps":80,
+        "Hosting Services":100,
+        "HPE IT RtB": 150,
+        "Others": 50,
+        "Total": 380,
+    },
+    "Core IT Services":{
+        "Mobile Subscription":60,
+        "Client Compting":100,
+        "Office Phone":20,
+        "Others":80,
+        "Total": 260,
+    },
+    "Enterprise IT Services":{
+        "It Management":60,
+        "Investment Projects":10,
+        "WAN":30,
+        "Others":60,
+        "Total": 160,
+    }
+}
 
 var waterfullChart = new WaterfullChart();
-var ad = waterfullChart.convertToAssistDatas([300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]);
-console.log(">>>", ad);
+//var ad = waterfullChart.convertToAssistDatas([300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]);
+waterfullChart.generateOptionDatas(rdd);
+waterfullChart.setBarsColor(["#FFFF88",,"#11FF00",,,"#222222"]);
+waterfullChart.setConfigOption();
+//console.log(">>>", ad);
+console.log("_",waterfullChart.xAxisData,"||||||",waterfullChart.seriesMainData,"///////",waterfullChart.seriesAssistData);
+console.log("------", waterfullChart.option);
+myWaterfulChart.setOption(waterfullChart.option);
