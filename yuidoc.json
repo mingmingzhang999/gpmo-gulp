@@ -1,0 +1,12 @@
+{
+  "name": "GPMO API",
+  "description": "GPMO JS API documentation",
+  "version": "1.1.0",
+  "options": {
+    "linkNatives": "true",
+    "attributesEmit": "true",
+    "paths": [
+      "./src/js/lib"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+    "project": {
+        "name": "GPMO API",
+        "description": "GPMO JS API documentation",
+        "version": "1.1.0"
+    },
+    "files": {
+        "src/js/lib/waterfull-chart.js": {
+            "name": "src/js/lib/waterfull-chart.js",
+            "modules": {},
+            "classes": {
+                "WaterfullChart": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "WaterfullChart": {
+            "name": "WaterfullChart",
+            "shortname": "WaterfullChart",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 148,
+            "description": "waterfull chart based on echart.",
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 88,
+            "description": ": cover the raw datas to echarts waterfull format datas",
+            "params": [
+                {
+                    "name": "datas",
+                    "description": "eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]",
+                    "type": "[[number]]"
+                }
+            ],
+            "return": {
+                "description": "datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]",
+                "type": "[number]"
+            },
+            "class": "WaterfullChart"
+        },
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 124,
+            "description": "flat the array",
+            "params": [
+                {
+                    "name": "datas",
+                    "description": "[description]",
+                    "type": "[*]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[*]"
+            },
+            "class": "WaterfullChart"
+        },
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 186,
+            "description": "set the color for each bar] seriesMainData will be like\n\n[{value:300,itemStyle:{\n   normal:{color:'gray'}\n   }\n  },\n {value:300,itemStyle:{\n   normal:{color:'gray'}\n    }\n  }\n]",
+            "params": [
+                {
+                    "name": "colors",
+                    "description": "[\"#00FF00\", \"#00FF88\"]",
+                    "type": "Array"
+                }
+            ],
+            "class": "WaterfullChart"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\n: cover the raw datas to echarts waterfull format datas",
+            "line": " src/js/lib/waterfull-chart.js:88"
+        },
+        {
+            "message": "Missing item type\nflat the array",
+            "line": " src/js/lib/waterfull-chart.js:124"
+        },
+        {
+            "message": "Missing item type\nset the color for each bar] seriesMainData will be like\n\n[{value:300,itemStyle:{\n   normal:{color:'gray'}\n   }\n  },\n {value:300,itemStyle:{\n   normal:{color:'gray'}\n    }\n  }\n]",
+            "line": " src/js/lib/waterfull-chart.js:186"
+        }
+    ]
+}

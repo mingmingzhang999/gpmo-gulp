@@ -145,6 +145,12 @@ function _flatMap(datas) {
     return flatDatas;
 }
 
+/**
+* waterfull chart based on echart.
+*
+* @class WaterfullChart
+* @constructor
+*/
 export class WaterfullChart {
     constructor() {
         this.seriesAssistData = [];
