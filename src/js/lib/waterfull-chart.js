@@ -89,8 +89,8 @@ var _defaultOption = {
  * Cover the raw datas to echarts waterfull format datas
  *
  * @method _convertToAssistDatas
- * @param  {[[number]]} datas eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]
- * @return {[number]} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
+ * @param  {any} datas eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]
+ * @return {array} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
  */
 function _convertToAssistDatas(datas) {
     let assistDatas = [];
@@ -127,8 +127,8 @@ function _convertToAssistDatas(datas) {
  * flat the array
  *
  * @method _flatMap
- * @param  {[*]} datas [description]
- * @return {[*]}       [description]
+ * @param  {any} datas [1, [9, 6],[3, 6, 8]]
+ * @return {array}       [1, 9, 6, 3, 6, 8]
  */
 function _flatMap(datas) {
     let flatDatas = [];
