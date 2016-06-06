@@ -38,7 +38,7 @@ gulp.task('scripts', ['clean'], function() {
          plugins: ["transform-es2015-modules-amd"]
         }))
     .pipe(rename({ suffix: '.min' }))
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('build/js/lib'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });

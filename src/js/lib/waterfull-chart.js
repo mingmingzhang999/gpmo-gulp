@@ -27,7 +27,10 @@ var _defaultOption = {
             interval: 0
         },
         axisLabel: {
-                    interval: 0
+                    interval: 0,
+                    formatter: function(val){
+                        return val.split(" ").join("\n");
+                    }
                 },
         data: []
     },
@@ -57,7 +60,7 @@ var _defaultOption = {
         label: {
             normal: {
                 show: true,
-                position: 'inside'
+                position: 'top'
             }
         },
         data: []
