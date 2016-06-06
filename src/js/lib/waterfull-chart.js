@@ -27,7 +27,15 @@ var _defaultOption = {
             interval: 0
         },
         axisLabel: {
-                    interval: 0
+                    interval: 0,
+                    formatter: function(val, index){
+                        if(index % 2 ===1 ){
+                            return "\n"+val;
+                        } else {
+                            return val;
+                        }
+                        //return val.split(" ").join("\n");
+                    }
                 },
         data: []
     },
@@ -57,7 +65,7 @@ var _defaultOption = {
         label: {
             normal: {
                 show: true,
-                position: 'inside'
+                position: 'top'
             }
         },
         data: []
@@ -78,9 +86,9 @@ var _defaultOption = {
 // ...
 
 /**
- * [convertToAssistDatas cover the raw datas to echarts waterfull format datas]
+ * @description: cover the raw datas to echarts waterfull format datas
  * @param  {[[number]]} datas eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]
- * @return {[[number]]} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
+ * @return {[number]} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
  */
 function _convertToAssistDatas(datas) {
     let assistDatas = [];
@@ -114,9 +122,12 @@ function _convertToAssistDatas(datas) {
 }
 
 /**
- * [_flatMap flatten the array]
- * @param  {[type]} datas [1,[3,6],[8,9]]
- * @return {[type]}       [1, 3, 6, 8, 9]
+ * @description
+ *
+ * flat the array
+ *
+ * @param  {[*]} datas [description]
+ * @return {[*]}       [description]
  */
 function _flatMap(datas) {
     let flatDatas = [];
@@ -167,17 +178,20 @@ export class WaterfullChart {
     }
 
     /**
-     * [setBarsColor set the color for each bar] seriesMainData will be like
-     *     [{value:300,itemStyle:{
-     *         normal:{color:'gray'}
-     *         }
-     *      },
-     *      {value:300,itemStyle:{
-     *         normal:{color:'gray'}
-     *         }
-     *      }
-     *     ]
-     * @param {[type]} colors ["#00FF00", "#00FF88"]
+     * @description
+     *
+     * set the color for each bar] seriesMainData will be like
+     *
+     * [{value:300,itemStyle:{
+     *    normal:{color:'gray'}
+     *    }
+     *   },
+     *  {value:300,itemStyle:{
+     *    normal:{color:'gray'}
+     *     }
+     *   }
+     * ]
+     * @param {array} colors ["#00FF00", "#00FF88"]
      */
     setBarsColor(colors) {
         colors.forEach((color, index) => {
