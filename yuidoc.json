@@ -7,6 +7,7 @@
     "attributesEmit": "true",
     "paths": [
       "./src/js/lib"
-    ]
+    ],
+     "outdir": "./output/api"
   }
 }
