@@ -86,9 +86,11 @@ var _defaultOption = {
 // ...
 
 /**
- * @description: cover the raw datas to echarts waterfull format datas
- * @param  {[[number]]} datas eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]
- * @return {[number]} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
+ * Cover the raw datas to echarts waterfull format datas
+ *
+ * @method _convertToAssistDatas
+ * @param  {any} datas eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]
+ * @return {array} datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]
  */
 function _convertToAssistDatas(datas) {
     let assistDatas = [];
@@ -122,12 +124,11 @@ function _convertToAssistDatas(datas) {
 }
 
 /**
- * @description
- *
  * flat the array
  *
- * @param  {[*]} datas [description]
- * @return {[*]}       [description]
+ * @method _flatMap
+ * @param  {any} datas [1, [9, 6],[3, 6, 8]]
+ * @return {array}       [1, 9, 6, 3, 6, 8]
  */
 function _flatMap(datas) {
     let flatDatas = [];
@@ -145,6 +146,12 @@ function _flatMap(datas) {
     return flatDatas;
 }
 
+/**
+* waterfull chart based on echart.
+*
+* @class WaterfullChart
+* @constructor
+*/
 export class WaterfullChart {
     constructor() {
         this.seriesAssistData = [];
@@ -178,8 +185,6 @@ export class WaterfullChart {
     }
 
     /**
-     * @description
-     *
      * set the color for each bar] seriesMainData will be like
      *
      * [{value:300,itemStyle:{
@@ -191,6 +196,8 @@ export class WaterfullChart {
      *     }
      *   }
      * ]
+     *
+     * @method setBarsColors
      * @param {array} colors ["#00FF00", "#00FF88"]
      */
     setBarsColor(colors) {

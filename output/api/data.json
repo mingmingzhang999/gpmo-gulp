@@ -1,0 +1,91 @@
+{
+    "project": {
+        "name": "GPMO API",
+        "description": "GPMO JS API documentation",
+        "version": "1.1.0"
+    },
+    "files": {
+        "src/js/lib/waterfull-chart.js": {
+            "name": "src/js/lib/waterfull-chart.js",
+            "modules": {},
+            "classes": {
+                "WaterfullChart": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "WaterfullChart": {
+            "name": "WaterfullChart",
+            "shortname": "WaterfullChart",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 149,
+            "description": "waterfull chart based on echart.",
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 88,
+            "description": "Cover the raw datas to echarts waterfull format datas",
+            "itemtype": "method",
+            "name": "_convertToAssistDatas",
+            "params": [
+                {
+                    "name": "datas",
+                    "description": "eg: [300,  [100, 30, 20, 50],   [50, 10, 35, 5],    [150, 50, 80, 20]]",
+                    "type": "Any"
+                }
+            ],
+            "return": {
+                "description": "datas eg: [0,    200, 270, 250, 200,  150, 190, 155, 150,  0, 100, 20, 0]",
+                "type": "Array"
+            },
+            "class": "WaterfullChart"
+        },
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 126,
+            "description": "flat the array",
+            "itemtype": "method",
+            "name": "_flatMap",
+            "params": [
+                {
+                    "name": "datas",
+                    "description": "[1, [9, 6],[3, 6, 8]]",
+                    "type": "Any"
+                }
+            ],
+            "return": {
+                "description": "[1, 9, 6, 3, 6, 8]",
+                "type": "Array"
+            },
+            "class": "WaterfullChart"
+        },
+        {
+            "file": "src/js/lib/waterfull-chart.js",
+            "line": 187,
+            "description": "set the color for each bar] seriesMainData will be like\n\n[{value:300,itemStyle:{\n   normal:{color:'gray'}\n   }\n  },\n {value:300,itemStyle:{\n   normal:{color:'gray'}\n    }\n  }\n]",
+            "itemtype": "method",
+            "name": "setBarsColors",
+            "params": [
+                {
+                    "name": "colors",
+                    "description": "[\"#00FF00\", \"#00FF88\"]",
+                    "type": "Array"
+                }
+            ],
+            "class": "WaterfullChart"
+        }
+    ],
+    "warnings": []
+}
