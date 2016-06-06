@@ -28,8 +28,13 @@ var _defaultOption = {
         },
         axisLabel: {
                     interval: 0,
-                    formatter: function(val){
-                        return val.split(" ").join("\n");
+                    formatter: function(val, index){
+                        if(index % 2 ===1 ){
+                            return "\n"+val;
+                        } else {
+                            return val;
+                        }
+                        //return val.split(" ").join("\n");
                     }
                 },
         data: []
